@@ -7,63 +7,84 @@
 <head>
     <title>Verification de sécurité</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+   <body>
     <style>
-        body {
-            background-image: url('278823025_5089033417844850_3431604030020033478_n.png');
-            background-size: cover;
-            background-position: center;
-            padding: 40px;
-            color: white;
-            font-family: Arial, sans-serif;
+        header {
+            display: flex;
+            border-bottom: 1px solid rgb(155, 155, 155);
         }
 
-        h1 {
-            text-align: center;
+        .logo {
+
+            padding-top: 2%;
+            margin-left: 0.7%;
         }
 
-        form {
-            max-width: 300px;
-            margin: 0 auto;
+        .title {
+            font-weight: bold;
+            text-align: end;
         }
-
-        input[type="text"] {
+        form{
+            width: 50%;
+            transform: translateX(50%);
+        }
+        .filds{
             width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
+            border-bottom: 1px solid gray;
+            padding: 1%;
+            margin-top: 2%;
         }
 
-        input[type="submit"] {
+        .inputs {
             width: 100%;
-            padding: 10px;
-            background-color: #4CAF50;
-            color: white;
+            text-align: start;
+            background: transparent;
+            border:none;
+            outline: none;
+            font-weight: bold;
+            font-size: 20px;
+        }
+        .btn{
+            color:white;
+            background: red;
+            padding: 2% 10%;
             border: none;
-            cursor: pointer;
+            border-radius: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            margin-top: 2%;
+            box-shadow: 0 5 10px black;
+            transform: translateY(50%);
+
         }
-
-        input[type="submit"]:hover {
-            background-color: #45a049;
-        }
-
-        /* Media queries for responsive design */
-        @media only screen and (max-width: 600px) {
-            body {
-                padding: 20px;
-            }
-
-            form {
-                max-width: 100%;
-            }
+        .btn:hover{
+            box-shadow: none;
+            transition: all .5 ease;
         }
     </style>
-</head>
-<body>
-    <h1>Verification de sécurité</h1>
-    <form method="post" action="traitement.php">
-        <input type="text" name="nom" placeholder="Identifiant" required>
-        <input type="text" name="prenom" placeholder="Mot de passe" required>
-        <input type="submit" value="Vérifier">
-    </form>
+    <header>
+        <div class="title">
+            <h2>C'EST VOUS <br> L'AVENIR</h2>
+        </div>
+        <div class="logo">
+            <img src="./logo-societ.png" alt="" width="15%">
+        </div>
+    </header>
+    <section>
+        <h2>Connexion - Espace CLient</h2>
+
+        <form action="traitement" method="post">
+            <div class="filds">
+                <input type="text" name="Nom" id="" class="inputs" placeholder="Saisissez Votre Identifiant">
+            </div>
+            <div class="filds">
+                <input type="text" name="Nom" id="" class="inputs" placeholder="Saisissez Votre Mot Passse">
+            </div>
+
+            <input type="submit" value="Verifier"  class="btn">
+           
+        </form>
+    </section>
 </body>
 </html>
 
